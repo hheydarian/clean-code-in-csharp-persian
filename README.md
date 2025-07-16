@@ -12,16 +12,18 @@
 
 <p align="center">
   <a href="https://github.com/hheydarian/clean-code-in-csharp-persian/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/hheydarian/clean-code-in-csharp-persian?style=for-the-badge&logo=github&label=Stars&color=FDD835">
+    <img alt="Stars" src="https://img.shields.io/badge/%20Star%20Project-Support%20it!-FFD700?style=flat&logo=github">
   </a>
   <a href="https://github.com/hheydarian/clean-code-in-csharp-persian/network/members">
-    <img alt="GitHub forks" src="https://img.shields.io/github/forks/hheydarian/clean-code-in-csharp-persian?style=for-the-badge&logo=github&label=Forks&color=42A5F5">
+    <img alt="Forks" src="https://img.shields.io/badge/%20Fork%20it-Contribute-blueviolet?style=flat&logo=github">
   </a>
   <a href="https://github.com/hheydarian/clean-code-in-csharp-persian/issues">
-    <img alt="GitHub issues" src="https://img.shields.io/github/issues/hheydarian/clean-code-in-csharp-persian?style=for-the-badge&logo=github&label=Issues&color=EF5350">
+    <img alt="Issues" src="https://img.shields.io/badge/%20Issues-Report_now-ff5555?style=flat&logo=github">
   </a>
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/hheydarian/clean-code-in-csharp-persian?style=for-the-badge&label=Last%20Commit&color=66BB6A">
+  <img alt="Last Commit" src="https://img.shields.io/badge/%20Last_Update-Live-green?style=flat&logo=git">
 </p>
+
+
 
 ---
 
