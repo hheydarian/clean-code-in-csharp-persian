@@ -11,11 +11,11 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/stars/hheydarian/clean-code-in-csharp-persian?style=social" alt="GitHub stars">
-  <img src="https://img.shields.io/github/forks/hheydarian/clean-code-in-csharp-persian?color=blueviolet" alt="GitHub forks">
-  <img src="https://img.shields.io/github/issues/hheydarian/clean-code-in-csharp-persian?color=ff69b4" alt="GitHub issues">
-  <img src="https://img.shields.io/github/last-commit/hheydarian/clean-code-in-csharp-persian?color=9cf" alt="Last Commit">
-
+  <img src="https://img.shields.io/github/stars/hheydarian/clean-code-in-csharp-persian?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/hheydarian/clean-code-in-csharp-persian?color=blueviolet" alt="GitHub forks">
+  <img src="https://img.shields.io/github/issues/hheydarian/clean-code-in-csharp-persian?color=ff69b4" alt="GitHub issues">
+  <img src="https://img.shields.io/github/issues-pr/hheydarian/clean-code-in-csharp-persian?color=orange" alt="GitHub pull requests">
+  <img src="https://img.shields.io/github/last-commit/hheydarian/clean-code-in-csharp-persian?color=9cf" alt="Last Commit">
 </p>
 
 
