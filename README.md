@@ -10,30 +10,14 @@
   <b>راهنمایی برای نوشتن کدهای تمیز، حرفه‌ای و قابل نگهداری با ❤️ در زبان C#</b>
 </p>
 
-<div align="center">
-  <table>
-    <tr>
-      <td>
-        <a href="https://github.com/hheydarian/clean-code-in-csharp-persian/stargazers">
-          <img alt="Stars" src="https://img.shields.io/badge/⭐️ Star-برای حمایت کلیک کن-FDD835?style=for-the-badge&logo=star" />
-        </a>
-      </td>
-      <td>
-        <a href="https://github.com/hheydarian/clean-code-in-csharp-persian/network/members">
-          <img alt="Forks" src="https://img.shields.io/badge/🍴 Fork-به پروژه ملحق شو-42A5F5?style=for-the-badge&logo=github" />
-        </a>
-      </td>
-      <td>
-        <a href="https://github.com/hheydarian/clean-code-in-csharp-persian/issues">
-          <img alt="Issues" src="https://img.shields.io/badge/🐞 Issues-گزارش باگ یا پیشنهاد-EF5350?style=for-the-badge&logo=gitbook" />
-        </a>
-      </td>
-      <td>
-        <img alt="Last Commit" src="https://img.shields.io/badge/⏱ Last Commit-بروزرسانی لحظه‌ای-66BB6A?style=for-the-badge&logo=git" />
-      </td>
-    </tr>
-  </table>
-</div>
+<p align="center">
+  <img src="https://img.shields.io/github/stars/hheydarian/clean-code-in-csharp-persian?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/hheydarian/clean-code-in-csharp-persian?color=blueviolet" alt="GitHub forks">
+  <img src="https://img.shields.io/github/issues/hheydarian/clean-code-in-csharp-persian?color=ff69b4" alt="GitHub issues">
+  <img src="https://img.shields.io/github/last-commit/hheydarian/clean-code-in-csharp-persian?color=9cf" alt="Last Commit">
+
+</p>
+
 
 
 
