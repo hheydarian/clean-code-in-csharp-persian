@@ -131,3 +131,254 @@ public void DoSomething()
 */
 ```
 چرا؟ فقط چرا؟ اگر جایگزین شده و دیگر مورد نیاز نیست، پس فقط آن را حذف کنید. اگر کد شما در سیستم کنترل نسخه (version control) است و نیاز دارید متد را برگردانید، همیشه می‌توانید تاریخچه فایل را مشاهده کرده و متد را برگردانید.
+
+## سازماندهی نامناسب فضای نام‌ها (Improper organization of namespaces)
+هنگام استفاده از فضاهای نام (namespaces)، کدهایی را که باید در جای دیگری باشند، در آن نگنجانید. این کار می‌تواند یافتن کد صحیح را به خصوص در پایگاه‌های کد بزرگ، بسیار دشوار یا غیرممکن کند. بیایید به این مثال نگاه کنیم:
+
+```C#
+
+namespace MyProject.TextFileMonitor
+{
+    + public class Program { ... }
+    + public class DateTime { ... }
+    + public class FileMonitorService { ... }
+    + public class Cryptography { ... }
+}
+```
+می‌بینیم که تمام کلاس‌های موجود در کد بالا تحت یک فضای نام قرار دارند. با این حال، ما این فرصت را داریم که سه فضای نام دیگر برای سازماندهی بهتر این کد اضافه کنیم:
+
++ MyProject.TextFileMonitor.Core: کلاس‌های هسته (Core) که اعضای متداول را تعریف می‌کنند، مانند کلاس DateTime ما، در اینجا قرار خواهند گرفت.
+
++ MyProject.TextFileMonitor.Services: تمام کلاس‌هایی که به عنوان سرویس عمل می‌کنند، مانند FileMonitorService، در این فضای نام قرار خواهند گرفت.
+
++ MyProject.TextFileMonitor.Security: تمام کلاس‌های مرتبط با امنیت، از جمله کلاس Cryptography در مثال ما، در این فضای نام قرار خواهند گرفت.
+
+
+## قوانین نام‌گذاری بد (Bad naming conventions)
+در دوران برنامه‌نویسی Visual Basic 6، از نشانه‌گذاری مجارستانی (Hungarian Notation) استفاده می‌کردیم. یادم می‌آید وقتی برای اولین بار به Visual Basic 1.0 تغییر برنامه دادم از آن استفاده می‌کردم. دیگر نیازی به استفاده از نشانه‌گذاری مجارستانی نیست. به علاوه، کد شما را زشت می‌کند. بنابراین به جای استفاده از نام‌هایی مانند lblName، txtName یا btnSave، روش مدرن استفاده از NameLabel، NameTextBox و SaveButton است.
+
+استفاده از نام‌های مرموز و نام‌هایی که به نظر نمی‌رسد با هدف کد مطابقت داشته باشند، می‌تواند خواندن کد را نسبتاً دشوار کند. ihridx به چه معناست؟ به معنای Human Resources Index و یک عدد صحیح است. واقعاً! از استفاده از نام‌هایی مانند mystring، myint و mymethod خودداری کنید. چنین نام‌هایی واقعاً کاربردی ندارند.
+
+همچنین از استفاده از آندرلاین بین کلمات در یک نام، مانند Bad_Programmer، خودداری کنید. این می‌تواند باعث فشار بصری برای توسعه‌دهندگان شود و خواندن کد را دشوار کند. کافیست آندرلاین را حذف کنید.
+
+از یک قرارداد کدنویسی برای متغیرها در سطح کلاس و سطح متد استفاده نکنید. این می‌تواند تشخیص محدوده یک متغیر را دشوار کند. یک قرارداد خوب برای نام‌گذاری متغیرها استفاده از حالت شتری (camel case) برای نام متغیرها مانند alienSpawn، و حالت پاسکال (Pascal case) برای نام متد، کلاس، ساختار (struct) و اینترفیس (interface) مانند EnemySpawnGenerator است.
+
+با پیروی از قرارداد نام‌گذاری متغیر خوب، باید بین متغیرهای محلی (local variables) (آنهایی که در یک سازنده یا متد قرار دارند) و متغیرهای عضو (member variables) (آنهایی که در بالای کلاس خارج از سازنده‌ها و متدها قرار می‌گیرند) با پیشوندگذاری متغیرهای عضو با یک آندرلاین تمایز قائل شوید. من از این به عنوان یک قرارداد کدنویسی در محل کار استفاده کرده‌ام و واقعاً خوب کار می‌کند و به نظر می‌رسد برنامه‌نویسان این قرارداد را دوست دارند.
+
+## کلاس‌هایی که چندین کار انجام می‌دهند (Classes that do multiple jobs)
+یک کلاس خوب باید فقط یک کار را انجام دهد. داشتن کلاسی که به پایگاه داده متصل می‌شود، داده‌ها را دریافت می‌کند، آن داده‌ها را دستکاری می‌کند، یک گزارش را بارگذاری می‌کند، داده‌ها را به گزارش اختصاص می‌دهد، گزارش را نمایش می‌دهد، گزارش را ذخیره می‌کند، گزارش‌ها را چاپ می‌کند و گزارش را اکسپورت می‌کند، کارهای زیادی انجام می‌دهد. باید آن را به کلاس‌های کوچک‌تر و بهتر سازمان‌یافته بازسازی (refactored) کرد. کلاس‌های جامع مانند این برای خواندن بسیار آزاردهنده هستند. من شخصاً آنها را دلهره‌آور می‌یابم. اگر با چنین کلاس‌هایی مواجه شدید، قابلیت‌ها را به بخش‌ها (regions) سازماندهی کنید. سپس کد موجود در آن بخش‌ها را به کلاس‌های جدیدی منتقل کنید که یک کار را انجام می‌دهند.
+
+بیایید به مثالی از کلاسی که چندین کار را انجام می‌دهد نگاه کنیم:
+
+```C#
+
+public class DbAndFileManager
+{
+    #region Database Operations
+    [ 13 ]
+    Coding Standards and Principles in C#
+    Chapter 1
+    public void OpenDatabaseConnection() { throw new
+        NotImplementedException(); }
+    public void CloseDatabaseConnection() { throw new
+        NotImplementedException(); }
+    public int ExecuteSql(string sql) { throw new
+        NotImplementedException(); }
+    public SqlDataReader SelectSql(string sql) { throw new
+        NotImplementedException(); }
+    public int UpdateSql(string sql) { throw new
+        NotImplementedException(); }
+    public int DeleteSql(string sql) { throw new
+        NotImplementedException(); }
+    public int InsertSql(string sql) { throw new
+        NotImplementedException(); }
+    #endregion
+    #region File Operations
+    public string ReadText(string filename) { throw new
+        NotImplementedException(); }
+    public void WriteText(string filename, string text) { throw new
+        NotImplementedException(); }
+    public byte[] ReadFile(string filename) { throw new
+        NotImplementedException(); }
+    public void WriteFile(string filename, byte[] binaryData) { throw new
+        NotImplementedException(); }
+    #endregion
+}
+```
+همانطور که در کد بالا می‌بینید، کلاس دو کار اصلی انجام می‌دهد: عملیات پایگاه داده و عملیات فایل را انجام می‌دهد. اکنون کد به طور مرتب در بخش‌های (regions) نام‌گذاری شده صحیح سازماندهی شده است که برای جداسازی منطقی کد در یک کلاس استفاده می‌شوند. اما اصل مسئولیت واحد (Single Responsibility Principle - SRP) نقض شده است. ما باید با بازسازی این کد شروع کنیم تا عملیات پایگاه داده را به کلاسی جداگانه، مانند DatabaseManager، منتقل کنیم.
+
+سپس، عملیات پایگاه داده را از کلاس DbAndFileManager حذف می‌کنیم، فقط عملیات فایل را باقی می‌گذاریم و سپس کلاس DbAndFileManager را به FileManager تغییر نام می‌دهیم. همچنین باید فضای نام هر فایل را در نظر بگیریم و اینکه آیا باید تغییر کند تا DatabaseManager در فضای نام Data و FileManager در فضای نام FileSystem (یا معادل‌های آنها در برنامه شما) قرار گیرد.
+
+
+کد زیر نتیجه استخراج کد پایگاه داده از کلاس DbAndFileManager به کلاس جداگانه خود و در فضای نام صحیح است:
+
+```C#
+
+using System;
+using System.Data.SqlClient;
+namespace CH01_CodingStandardsAndPrinciples.GoodCode.Data
+{
+    public class DatabaseManager
+    {
+        #region Database Operations
+        public void OpenDatabaseConnection() { throw new
+            NotImplementedException(); }
+        public void CloseDatabaseConnection() { throw new
+            NotImplementedException(); }
+        public int ExecuteSql(string sql) { throw new
+            NotImplementedException(); }
+        public SqlDataReader SelectSql(string sql) { throw new
+            NotImplementedException(); }
+        public int UpdateSql(string sql) { throw new
+            NotImplementedException(); }
+        public int DeleteSql(string sql) { throw new
+            NotImplementedException(); }
+        public int InsertSql(string sql) { throw new
+            NotImplementedException(); }
+        #endregion
+    }
+}
+```
+بازسازی کد سیستم فایل منجر به کلاس FileManager در فضای نام FileSystem می‌شود، همانطور که در کد زیر نشان داده شده است:
+
+```C#
+
+using System;
+namespace CH01_CodingStandardsAndPrinciples.GoodCode.FileSystem
+{
+    public class FileManager
+    {
+        #region File Operations
+        public string ReadText(string filename) { throw new
+            NotImplementedException(); }
+        public void WriteText(string filename, string text) { throw new
+            NotImplementedException(); }
+        public byte[] ReadFile(string filename) { throw new
+            NotImplementedException(); }
+        [ 15 ]
+        Coding Standards and Principles in C#
+        Chapter 1
+        public void WriteFile(string filename, byte[] binaryData) { throw
+            new NotImplementedException(); }
+        #endregion
+    }
+}
+```
+دیدیم که چگونه کلاس‌هایی که بیش از حد کار انجام می‌دهند را شناسایی کنیم و چگونه می‌توانیم آنها را بازسازی کنیم تا فقط یک کار را انجام دهند. اکنون بیایید این فرآیند را در مورد متدهایی که کارهای زیادی انجام می‌دهند، تکرار کنیم.
+
+## متدهایی که کارهای زیادی انجام می‌دهند (Methods that do many things)
+من خودم را بارها در متدهایی گم کرده‌ام که سطوح تورفتگی بسیار زیادی دارند و کارهای زیادی را در آن تورفتگی‌های مختلف انجام می‌دهند. ترکیبات (permutations) گیج‌کننده بودند. می‌خواستم کد را بازسازی کنم تا نگهداری آن آسان‌تر شود، اما سرپرستم این کار را ممنوع کرد. من به وضوح می‌توانستم ببینم که چگونه می‌توانست با تقسیم کردن کد به متدهای مختلف، متد کوچک‌تر شود.
+
+وقت یک مثال است. در این مثال، متد یک رشته را می‌پذیرد. آن رشته سپس رمزگذاری (encrypted) و رمزگشایی (decrypted) می‌شود. همچنین طولانی است تا بتوانید ببینید چرا متدها باید کوچک نگه داشته شوند:
+
+```C#
+
+public string security(string plainText)
+{
+    try
+    {
+        byte[] encrypted;
+        using (AesManaged aes = new AesManaged())
+        {
+            ICryptoTransform encryptor = aes.CreateEncryptor(Key, IV);
+            using (MemoryStream ms = new MemoryStream())
+                using (CryptoStream cs = new CryptoStream(ms, encryptor,
+                    CryptoStreamMode.Write))
+                {
+                    using (StreamWriter sw = new StreamWriter(cs))
+                        sw.Write(plainText);
+                    encrypted = ms.ToArray();
+                }
+        }
+        Console.WriteLine($"Encrypted data:
+            {System.Text.Encoding.UTF8.GetString(encrypted)}");
+        using (AesManaged aesm = new AesManaged())
+        {
+            ICryptoTransform decryptor = aesm.CreateDecryptor(Key, IV);
+            using (MemoryStream ms = new MemoryStream(encrypted))
+            {
+                using (CryptoStream cs = new CryptoStream(ms, decryptor,
+                    CryptoStreamMode.Read))
+                {
+                    using (StreamReader reader = new StreamReader(cs))
+                        plainText = reader.ReadToEnd();
+                }
+            }
+        }
+        Console.WriteLine($"Decrypted data: {plainText}");
+    }
+    catch (Exception exp)
+    {
+        Console.WriteLine(exp.Message);
+    }
+    Console.ReadKey();
+    return plainText;
+}
+```
+همانطور که در متد بالا می‌بینید، ۱۰ خط کد دارد و خواندن آن دشوار است. به علاوه، بیش از یک کار را انجام می‌دهد. این کد را می‌توان به دو متد تقسیم کرد که هر یک یک وظیفه را انجام می‌دهند. یک متد یک رشته را رمزگذاری می‌کند و متد دیگر رشته را رمزگشایی می‌کند. این ما را به خوبی به این بحث می‌رساند که چرا متدها نباید بیش از ۱۰ خط کد داشته باشند.
+
+## متدهای با بیش از ۱۰ خط کد (Methods with more than 10 lines of code)
+متدهای بزرگ برای خواندن و درک کردن خوب نیستند. آن‌ها همچنین می‌توانند منجر به باگ‌هایی شوند که یافتنشان بسیار دشوار است. مشکل دیگر متدهای بزرگ این است که ممکن است هدف اصلی خود را از دست بدهند. وضعیت زمانی بدتر می‌شود که با متدهای بزرگی مواجه می‌شوید که بخش‌هایی از آن‌ها با کامنت‌ها جدا شده و کد در بخش‌ها (regions) پیچیده شده است.
+
+اگر برای خواندن یک متد مجبور به اسکرول کردن هستید، پس بیش از حد طولانی است و می‌تواند منجر به استرس برنامه‌نویس و سوءتفسیر شود. این به نوبه خود می‌تواند به اصلاحاتی منجر شود که کد یا هدف، یا هر دو را از بین ببرد. متدها باید تا حد امکان کوچک باشند. اما باید از عقل سلیم نیز استفاده کرد، زیرا می‌توان موضوع متدهای کوچک را تا حد اغراق‌آمیز پیش برد تا جایی که بیش از حد شود. کلید دستیابی به تعادل صحیح، اطمینان از بسیار واضح بودن هدف متد و پیاده‌سازی مختصر آن است.
+
+کد قبلی یک مثال خوب برای این است که چرا باید متدها را کوچک نگه داشت. متدهای کوچک به راحتی قابل خواندن و درک هستند. معمولاً، اگر کد شما از ۱۰ خط فراتر رود، ممکن است بیش از حد انتظار عمل کند. مطمئن شوید که متدهای شما هدف خود را نام‌گذاری می‌کنند، مانند OpenDatabaseConnection() و CloseDatabaseConnection()، و به اهداف خود پایبند باشند و از آن‌ها منحرف نشوند.
+
+اکنون به پارامترهای متدها خواهیم پرداخت.
+
+## متدهای با بیش از دو پارامتر (Methods with more than two parameters)
+متدهای با پارامترهای زیاد تمایل دارند کمی دست و پا گیر شوند. علاوه بر دشواری در خواندن، انتقال یک مقدار به پارامتر اشتباه و شکستن ایمنی نوع (type safety) بسیار آسان است.
+
+تست (testing) متدها با افزایش تعداد پارامترها به طور فزاینده‌ای پیچیده‌تر می‌شوند، دلیل اصلی آن این است که شما جایگشت‌های بیشتری برای اعمال در سناریوهای تست (test cases) خود دارید. ممکن است یک مورد استفاده را از دست بدهید که باعث ایجاد مشکل در فاز عملیاتی (production) خواهد شد.
+
+## استفاده از استثناها برای کنترل جریان برنامه (Using exceptions to control program flow)
+استفاده از استثناها (Exceptions) برای کنترل جریان برنامه (program flow) ممکن است هدف کد را پنهان کند. آن‌ها همچنین می‌توانند منجر به نتایج غیرمنتظره و ناخواسته شوند. این واقعیت که کد شما برای انتظار یک یا چند استثنا برنامه‌ریزی شده است، نشان‌دهنده اشتباه بودن طراحی شماست. یک سناریوی معمول که در فصل ۵، "مدیریت استثنا (Exception Handling)" با جزئیات بیشتر پوشش داده شده است.
+
+یک سناریوی معمول زمانی است که یک کسب‌وکار از استثناهای قوانین تجاری (Business Rule Exceptions - BREs) استفاده می‌کند. یک متد عملی را با انتظار اینکه یک استثنا پرتاب شود، انجام می‌دهد. جریان برنامه توسط اینکه آیا استثنا پرتاب می‌شود یا خیر، تعیین خواهد شد. راه بسیار بهتر، استفاده از ساختارهای زبان (language constructs) موجود برای انجام اعتبارسنجی‌ها (validation checks) است که یک مقدار بولین (Boolean) را برمی‌گرداند.
+
+کد زیر استفاده از یک BRE را برای کنترل جریان برنامه نشان می‌دهد:
+
+```C#
+
+public void BreFlowControlExample(BusinessRuleException bre)
+{
+    switch (bre.Message)
+    {
+        case "OutOfAcceptableRange":
+            DoOutOfAcceptableRangeWork();
+            break;
+        default:
+            DoInAcceptableRangeWork();
+            break;
+    }
+}
+```
+متد BusinessRuleException را می‌پذیرد. بسته به پیام در استثنا، BreFlowControlExample() یا متد DoOutOfAcceptableRangeWork() را فراخوانی می‌کند یا متد DoInAcceptableRangeWork() را.
+
+
+راه بسیار بهتر برای کنترل جریان از طریق منطق بولین (Boolean logic) است. بیایید به متد BetterFlowControlExample() زیر نگاه کنیم:
+
+```C#
+
+public void BetterFlowControlExample(bool isInAcceptableRange)
+{
+    if (isInAcceptableRange)
+        DoInAcceptableRangeWork();
+    else
+        DoOutOfAcceptableRangeWork();
+}
+```
+در متد BetterFlowControlExample()، یک مقدار بولین به متد پاس داده می‌شود. مقدار بولین برای تعیین مسیر اجرا استفاده می‌شود. اگر شرط در محدوده قابل قبول باشد، DoInAcceptableRangeWork() فراخوانی می‌شود. در غیر این صورت، متد DoOutOfAcceptableRangeWork() فراخوانی می‌شود.
+
+در ادامه، کدی را که خواندن آن دشوار است، بررسی خواهیم کرد.
+
+## کدی که خواندن آن دشوار است (Code that is difficult to read)
+کدهایی مانند کد لازانیا (lasagna code) و کد اسپاگتی (spaghetti code) واقعاً برای خواندن یا دنبال کردن دشوار هستند. متدهای با نام‌گذاری بد نیز می‌توانند آزاردهنده باشند زیرا می‌توانند هدف متد را پنهان (obfuscate) کنند. متدها زمانی بیشتر پنهان می‌شوند که بزرگ باشند و متدهای مرتبط با تعدادی متد نامرتبط از هم جدا شده باشند.
+
+کد لازانیا (Lasagna code)، که معمولاً با نام ارجاع غیرمستقیم (indirection) شناخته می‌شود، به لایه‌های انتزاع (abstraction) اشاره دارد که در آن چیزی به جای عمل، با نام ارجاع داده می‌شود. لایه‌بندی به طور گسترده در برنامه‌نویسی شی‌گرا (Object-Oriented Programming - OOP) و با اثرگذاری خوب استفاده می‌شود. با این حال، هرچه ارجاع غیرمستقیم بیشتر استفاده شود، کد می‌تواند پیچیده‌تر شود. این می‌تواند برای برنامه‌نویسان جدید در یک پروژه، درک و همگام شدن با کد را بسیار دشوار کند. بنابراین باید بین ارجاع غیرمستقیم و سهولت درک، تعادلی برقرار شود.
+
+کد اسپاگتی (Spaghetti code) به مجموعه‌ای درهم‌تنیده از کدهای با اتصال محکم (tightly coupled) و انسجام پایین (low cohesion) اشاره دارد. نگهداری، بازسازی، توسعه و بازطراحی چنین کدهایی بسیار دشوار است. هرچند از جنبه مثبت، چون از نظر برنامه‌نویسی بیشتر روال‌گرا (procedural) است، خواندن و دنبال کردن آن می‌تواند بسیار آسان باشد. یادم می‌آید زمانی که به عنوان یک برنامه‌نویس تازه‌کار روی یک برنامه GIS با VB6 کار می‌کردم که به شرکت‌ها فروخته می‌شد و برای اهداف بازاریابی استفاده می‌شد. مدیر فنی من و برنامه‌نویسان ارشدش قبلاً سعی کرده بودند نرم‌افزار را بازطراحی کنند و شکست خورده بودند. بنابراین آن‌ها مسئولیت را به من سپردند تا برنامه را بازطراحی کنم. اما من در آن زمان در تحلیل و طراحی نرم‌افزار مهارت نداشتم، بنابراین من هم شکست خوردم.
+
+کد بیش از حد پیچیده بود که نمی‌شد آن را دنبال کرد و به آیتم‌های مرتبط گروه‌بندی کرد، و بیش از حد بزرگ بود. با نگاه به گذشته، بهتر بود لیستی از هر کاری که برنامه انجام می‌دهد تهیه می‌کردم، لیست را بر اساس ویژگی‌ها گروه‌بندی می‌کردم و سپس لیستی از الزامات را بدون حتی نگاه کردن به کد، تهیه می‌کردم.
+
+بنابراین درس من در بازطراحی نرم‌افزار این است که به هر قیمتی از نگاه کردن به کد خودداری کنم. همه کارهایی که برنامه انجام می‌دهد و قابلیت‌های جدیدی که باید شامل شود را یادداشت کنید. لیست را به مجموعه‌ای از الزامات نرم‌افزاری (software requirements) با وظایف، تست‌ها و معیارهای پذیرش (acceptance criteria) مرتبط تبدیل کنید، و سپس بر اساس مشخصات (specifications) برنامه‌نویسی کنید.
