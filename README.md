@@ -51,8 +51,8 @@
 
 <ul dir="rtl">
   <li><b>00 - Preface:</b> مقدمه (ترجمه شده ✅)</li>
-  <li><b>01 - #Coding Standards and Principles in C:</b> استاندارد ها و اصول کدنویسی در سی شارپ ( در حال ترجمه  🟡)</li>
-  <li><b>02 - Code Review – Process and Importance:</b> بررسی کد - فرانید و اهمیت (ترجمه نشده ❌)</li>
+  <li><b>01 - #Coding Standards and Principles in C:</b> استاندارد ها و اصول کدنویسی در سی شارپ ( ترجمه شده ✅)</li>
+  <li><b>02 - Code Review – Process and Importance:</b> بررسی کد - فرانید و اهمیت (در حال ترجمه  🟡)</li>
   <li><b>03 - Classes, Objects, and Data Structures:</b> کلاس ها، اشیا و ساختار داده (ترجمه نشده ❌)</li>
   <li><b>04 - Writing Clean Functions:</b> نوشتن توابع تمیز ( ترجمه شده ✅)</li>
   <li><b>05 - Exception Handling:</b> رسیدگی به خطاها (ترجمه نشده ❌)</li>
@@ -74,8 +74,8 @@
 | شماره | نام فصل (انگلیسی)                                  | نام فصل (فارسی)                               | وضعیت | لینک                                                                                                                       |
 |:------|:---------------------------------------------------|:----------------------------------------------|:------|:---------------------------------------------------------------------------------------------------------------------------|
 | 00    | Preface                                            | مقدمه                                         | ✅     | [Book/00/Preface.md](Book/00/Preface.md)                                                                                   |
-| 01    | Coding Standards and Principles in C#              | استاندارد ها و اصول کدنویسی در سی شارپ        | 🟡     | [Book/01/Coding-Standards-and-Principles-in-C#.md](Book/01/Coding-Standards-and-Principles-in-C#.md)                       |
-| 02    | Code Review – Process and Importance               | بررسی کد - فرانید و اهمیت                     | ❌     | [Book/02/Code-Review-Process-and-Importance.md](Book/02/Code-Review-Process-and-Importance.md)                             |
+| 01    | Coding Standards and Principles in C#              | استاندارد ها و اصول کدنویسی در سی شارپ        | ✅     | [Book/01/Coding-Standards-and-Principles-in-C#.md](Book/01/Coding-Standards-and-Principles-in-C#.md)                       |
+| 02    | Code Review – Process and Importance               | بررسی کد - فرانید و اهمیت                     | 🟡     | [Book/02/Code-Review-Process-and-Importance.md](Book/02/Code-Review-Process-and-Importance.md)                             |
 | 03    | Classes, Objects, and Data Structures              | کلاس ها، اشیا و ساختار داده                   | ❌     | [Book/03/Classes-Objects-and-Data.md](Book/03/Classes-Objects-and-Data.md)                                                 |
 | 04    | Writing Clean Functions                            | نوشتن توابع تمیز                              | ✅     | [Book/04/Writing-Clean-Functions.md](Book/04/Writing-Clean-Functions.md)                                                   |
 | 05    | Exception Handling                                 | رسیدگی به خطاها                               | ❌     | [Book/05/Exception-Handling.md](Book/05/Exception-Handling.md)                                                             |
