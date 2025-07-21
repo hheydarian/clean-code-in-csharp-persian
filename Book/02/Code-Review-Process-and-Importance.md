@@ -103,3 +103,10 @@
   ![Conventions-UsedThis-Book](../../assets/image/02/Table%202-3.png) 
   
 </div>
+
+3. اگر راضی هستید، سپس روی دکمه ایجاد درخواست کشیدن (Create pull request) کلیک کنید تا درخواست کشیدن را آغاز کنید. سپس صفحه باز کردن یک درخواست کشیدن (Open a pull request) به شما نمایش داده خواهد شد:
+
+<div align="center">
+  
+  ![Conventions-UsedThis-Book](../../assets/image/02/Table%202-4.png) 
+</div>
