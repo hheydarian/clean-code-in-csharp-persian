@@ -96,3 +96,10 @@
   
 </div>
 
+2. سپس، روی دکمه درخواست کشیدن جدید (New pull request) کلیک کنید. این کار صفحه مقایسه تغییرات (Comparing changes) را نمایش خواهد داد:
+
+<div align="center">
+  
+  ![Conventions-UsedThis-Book](../../assets/image/02/Table%202-3.png) 
+  
+</div>
