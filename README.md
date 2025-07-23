@@ -52,8 +52,8 @@
 <ul dir="rtl">
   <li><b>00 - Preface:</b> مقدمه (ترجمه شده ✅)</li>
   <li><b>01 - #Coding Standards and Principles in C:</b> استاندارد ها و اصول کدنویسی در سی شارپ ( ترجمه شده ✅)</li>
-  <li><b>02 - Code Review – Process and Importance:</b> بررسی کد - فرانید و اهمیت (در حال ترجمه  🟡)</li>
-  <li><b>03 - Classes, Objects, and Data Structures:</b> کلاس ها، اشیا و ساختار داده (ترجمه نشده ❌)</li>
+  <li><b>02 - Code Review – Process and Importance:</b> بررسی کد - فرانید و اهمیت (ترجمه شده ✅)</li>
+  <li><b>03 - Classes, Objects, and Data Structures:</b> کلاس ها، اشیا و ساختار داده (در حال ترجمه  🟡)</li>
   <li><b>04 - Writing Clean Functions:</b> نوشتن توابع تمیز ( ترجمه شده ✅)</li>
   <li><b>05 - Exception Handling:</b> رسیدگی به خطاها (ترجمه نشده ❌)</li>
   <li><b>06 - Unit Testing:</b> تست واحد (ترجمه نشده ❌)</li>
@@ -75,8 +75,8 @@
 |:------|:---------------------------------------------------|:----------------------------------------------|:------|:---------------------------------------------------------------------------------------------------------------------------|
 | 00    | Preface                                            | مقدمه                                         | ✅     | [Preface](Book/00/Preface.md)                                                                                   |
 | 01    | Coding Standards and Principles in C#              | استاندارد ها و اصول کدنویسی در سی شارپ        | ✅     | [Coding-Standards-and-Principles-in-C#](Book/01/Coding-Standards-and-Principles-in-C%23.md)                      |
-| 02    | Code Review – Process and Importance               | بررسی کد - فرانید و اهمیت                     | 🟡     | [Code-Review-Process-and-Importance](Book/02/Code-Review-Process-and-Importance.md)                             |
-| 03    | Classes, Objects, and Data Structures              | کلاس ها، اشیا و ساختار داده                   | ❌     | [Classes-Objects-and-Data](Book/03/Classes-Objects-and-Data.md)                                                 |
+| 02    | Code Review – Process and Importance               | بررسی کد - فرانید و اهمیت                     | ✅     | [Code-Review-Process-and-Importance](Book/02/Code-Review-Process-and-Importance.md)                             |
+| 03    | Classes, Objects, and Data Structures              | کلاس ها، اشیا و ساختار داده                   | 🟡     | [Classes-Objects-and-Data](Book/03/Classes-Objects-and-Data.md)                                                 |
 | 04    | Writing Clean Functions                            | نوشتن توابع تمیز                              | ✅     | [Writing-Clean-Functions](Book/04/Writing-Clean-Functions.md)                                                   |
 | 05    | Exception Handling                                 | رسیدگی به خطاها                               | ❌     | [Book/05/Exception-Handling.md](Book/05/Exception-Handling.md)                                                             |
 | 06    | Unit Testing                                       | تست واحد                                      | ❌     | [Book/06/Unit-Testing.md](Book/06/Unit-Testing.md)                                                                         |
