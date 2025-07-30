@@ -49,6 +49,6 @@ System.Collections.Immutable قرار دارند.
 📸 تصویر زیر ساختار تمیز فایل‌ها و پوشه‌ها را نمایش می‌دهد:
 <div align="center">
   
-  ![Conventions-UsedThis-Book](../../assets/image/03/Table%203-1.png) 
+  ![Conventions-UsedThis-Book](../../assets/image/03/Table%203-1.jpeg) 
   
 </div>
