@@ -182,3 +182,101 @@ namespace FakeCompany.Core.FileSystem
 }
 ```
 ما به سازماندهی (organization) و مسئولیت (responsibility) کلاس‌ها پرداختیم. اکنون بیایید به نظردهی (commenting) در مورد کلاس‌ها برای بهره‌مندی سایر توسعه‌دهندگان نگاهی بیندازیم.
+
+## نظردهی برای تولید مستندات (Commenting for documentation generation)
+مستندسازی کد منبع (documenting your source code) شما همیشه ایده خوبی است، چه یک پروژه داخلی باشد و چه یک نرم‌افزار خارجی که توسط توسعه‌دهندگان دیگر استفاده خواهد شد. پروژه‌های داخلی به دلیل جابجایی توسعه‌دهنده (developer turnover) و اغلب مستندات ضعیف یا عدم وجود آن برای کمک به توسعه‌دهندگان جدید برای آشنا شدن با کار (get up to speed)، آسیب می‌بینند. بسیاری از APIهای شخص ثالث (third-party APIs) موفق به شروع به کار نمی‌شوند یا پذیرش آن‌ها کندتر از حد انتظار است، اغلب به دلیل اینکه استفاده‌کنندگان از APIها به دلیل وضعیت ضعیف مستندات توسعه‌دهنده (developer documentation) از روی ناامیدی آن‌ها را رها می‌کنند.
+
+همیشه ایده خوبی است که اعلامیه‌های حق تکثیر (copyright notices) را در بالای هر فایل کد منبع قرار دهید و در مورد فضاهای نام (namespaces)، رابط‌ها (interfaces)، کلاس‌ها (classes)، شمارش‌ها (enums)، ساختارها (structs)، متدها (methods) و ویژگی‌های (properties) خود نظر بنویسید. نظرات حق تکثیر شما باید اولین مورد در فایل سورس باشد، بالای عبارات using و به شکل یک نظر چند خطی (multiline comment) باشد که با /* شروع و با */ به پایان می‌رسد:
+
+/**************************************************************************
+ ********
+ * Copyright 2019 PacktPub
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ copy of
+ * this software and associated documentation files (the "Software"), to
+ [ 67 ]
+Classes, Objects, and Data Structures
+ Chapter 3
+ deal in
+ * the Software without restriction, including without limitation the
+ rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+ of the
+ * Software, and to permit persons to whom the Software is furnished to do
+ so,
+ * subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE
+ * SOFTWARE.
+ ***************************************************************************
+ ******/
+```C#
+
+using System;
+/// <summary>
+/// The CH3.Core.Security namespace contains fundamental types used
+/// for the purpose of implementing application security.
+/// </summary>
+
+
+ namespace CH3.Core.Security
+ {
+    /// <summary>
+    /// Encrypts and decrypts provided strings based on the selected
+    /// algorithm.
+    /// </summary>
+
+
+    public class Cryptography
+    {
+        /// <summary>
+        /// Decrypts a string using the selected algorithm.
+        /// </summary>
+
+        /// <param name="text">The string to be decrypted.</param>
+        /// <param name="algorithm">The cryptographic algorithm used to decrypt the string.</param>
+        /// <returns>Decrypted string</returns>
+ [ 68 ]
+Classes, Objects, and Data Structures
+ Chapter 3
+        public string DecryptString(string text,
+         SecurityAlgorithm algorithm)
+        {
+            // ...implementation...
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Encrypts a string using the selected algorithm.
+        /// </summary>
+
+        /// <param name="text">The string to encrypt.</param>
+        /// <param name="algorithm">The cryptographic algorithm used to encrypt the string.</param>
+        /// <returns>Encrypted string</returns>
+        public string EncryptString(string text,
+         SecurityAlgorithm algorithm)
+        {
+            // ...implementation...
+            throw new NotImplementedException();
+        }
+    }
+ }
+```
+نمونه کد بالا مثالی از یک فضای نام و کلاس مستند شده به همراه متدهای مستند شده را ارائه می‌دهد. خواهید دید که نظرات مستندات (documentation comments) برای فضای نام و اعضای موجود در آن با سه اسلش (///) شروع می‌شوند و مستقیماً بالای آیتم مورد نظر قرار می‌گیرند. هنگامی که شما سه اسلش را تایپ می‌کنید، ویژوال استودیو به صورت خودکار تگ‌های XML را بر اساس خط پایین ایجاد می‌کند.
+
+به عنوان مثال، در کد بالا، فضای نام و کلاس فقط یک تگ <summary> دارند، اما هر دو متد شامل یک summary، چند تگ param برای پارامترها و یک تگ returns برای مقدار بازگشتی هستند.
+
+جدول زیر تگ‌های مختلف XML را که می‌توانید در نظرات مستندات خود استفاده کنید، شامل می‌شود. (توجه: جدول در متن اصلی ارائه نشده است.)
