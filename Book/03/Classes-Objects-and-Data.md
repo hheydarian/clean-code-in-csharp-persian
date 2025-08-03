@@ -280,3 +280,9 @@ Classes, Objects, and Data Structures
 به عنوان مثال، در کد بالا، فضای نام و کلاس فقط یک تگ <summary> دارند، اما هر دو متد شامل یک summary، چند تگ param برای پارامترها و یک تگ returns برای مقدار بازگشتی هستند.
 
 جدول زیر تگ‌های مختلف XML را که می‌توانید در نظرات مستندات خود استفاده کنید، شامل می‌شود. (توجه: جدول در متن اصلی ارائه نشده است.)
+
+<div align="center">
+  
+  ![Conventions-UsedThis-Book](../../assets/image/03/Table%203-2.jpeg) 
+  
+</div>
