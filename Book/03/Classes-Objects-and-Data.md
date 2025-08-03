@@ -286,3 +286,123 @@ Classes, Objects, and Data Structures
   ![Conventions-UsedThis-Book](../../assets/image/03/Table%203-2.jpeg) 
   
 </div>
+
+از جدول قبلی ، مشخص است که شما فضای زیادی برای مستندسازی کد منبع خود دارید. بنابراین ایده خوبی است که از تگ‌های موجود برای مستندسازی کد خود به بهترین نحو استفاده کنید. هرچه مستندات بهتر باشد، برای سایر توسعه‌دهندگان سریع‌تر و آسان‌تر خواهد بود که با استفاده از کد آشنا شوند.
+
+اکنون زمان آن است که به همبستگی (cohesion) و جفت‌شدگی (coupling) نگاهی بیندازیم.
+
+## همبستگی و جفت‌شدگی (Cohesion and coupling)
+در یک مجموعه (assembly) C# که به خوبی طراحی شده است، کد به درستی با هم گروه‌بندی می‌شود. به این همبستگی بالا (high cohesion) می‌گویند. همبستگی پایین (low cohesion) زمانی است که کدی را دارید که با هم گروه‌بندی شده‌اند اما به یکدیگر تعلق ندارند.
+
+شما می‌خواهید کلاس‌های مرتبط تا حد امکان مستقل (independent) از هم باشند. هرچه یک کلاس به کلاس دیگری وابسته باشد، جفت‌شدگی (coupling) بالاتر است. به این جفت‌شدگی محکم (tight coupling) می‌گویند. هرچه کلاس‌ها از یکدیگر مستقل‌تر باشند، جفت‌شدگی پایین‌تر است. به این جفت‌شدگی سست (low coupling) می‌گویند.
+
+بنابراین، در یک کلاس با تعریف خوب، شما به همبستگی بالا (high cohesion) و جفت‌شدگی پایین (low coupling) نیاز دارید. اکنون به مثال‌هایی از جفت‌شدگی محکم و سپس جفت‌شدگی سست نگاهی می‌اندازیم.
+
+
+## یک مثال از جفت‌شدگی محکم (An example of tight coupling)
+در نمونه کد زیر، کلاس TightCouplingA کپسوله‌سازی (encapsulation) را می‌شکند و متغیر _name را به صورت مستقیم قابل دسترسی می‌کند. متغیر _name باید private باشد و فقط توسط ویژگی‌ها یا متدهای داخل کلاس محصور کننده خود تغییر یابد. ویژگی Name متدهای get و set را برای اعتبارسنجی متغیر _name فراهم می‌کند، اما این کاملاً بی‌معنی است زیرا می‌توان از این بررسی‌ها صرف‌نظر کرد و ویژگی‌ها را فراخوانی نکرد:
+
+```C#
+
+using System.Diagnostics;
+namespace CH3.Coupling
+{
+    public class TightCouplingA
+    {
+        public string _name;
+        public string Name
+        {
+            get
+            {
+            }
+            set
+            {
+                if (!_name.Equals(string.Empty))
+                    return _name;
+                else
+                    return "String is empty!";
+                if (value.Equals(string.Empty))
+                    Debug.WriteLine("String is empty!");
+            }
+        }
+    }
+}
+```
+از طرف دیگر، در کد زیر، کلاس TightCouplingB یک نمونه از TightCouplingA ایجاد می‌کند. سپس با دسترسی مستقیم به متغیر عضو _name و تنظیم آن روی null، و سپس دسترسی مستقیم برای چاپ مقدار آن در پنجره خروجی دیباگ، جفت‌شدگی محکمی (tight coupling) بین دو کلاس ایجاد می‌کند:
+
+```C#
+
+using System.Diagnostics;
+namespace CH3.Coupling
+{
+    public class TightCouplingB
+    {
+        public TightCouplingB()
+        {
+            TightCouplingA tca = new TightCouplingA();
+            tca._name = null;
+            Debug.WriteLine("Name is " + tca._name);
+        }
+    }
+}
+```
+
+
+            
+اکنون بیایید به همان مثال ساده با استفاده از جفت‌شدگی سست (low coupling) نگاه کنیم.
+
+## یک مثال از جفت‌شدگی سست (An example of low coupling)
+در این مثال، ما دو کلاس داریم، LooseCouplingA و LooseCouplingB.
+LooseCouplingA یک متغیر نمونه private به نام _name اعلام می‌کند، و این متغیر از طریق یک ویژگی public تنظیم می‌شود.
+LooseCouplingB یک نمونه از LooseCouplingA ایجاد می‌کند و مقدار Name را می‌گیرد و تنظیم می‌کند (gets and sets). از آنجا که عضو داده _name نمی‌تواند مستقیماً تنظیم شود، بررسی‌های مربوط به تنظیم و گرفتن مقدار آن عضو داده انجام می‌شود.
+و بنابراین ما مثالی از جفت‌شدگی سست داریم. بیایید نگاهی به دو کلاس LooseCouplingA و LooseCouplingB بیندازیم که این را در عمل نشان می‌دهند:
+
+```C#
+
+using System.Diagnostics;
+namespace CH3.Coupling
+{
+    public class LooseCouplingA
+    {
+        private string _name;
+        private readonly string _stringIsEmpty = "String is empty";
+        public string Name
+        {
+            get
+            {
+                if (_name.Equals(string.Empty))
+                    return _stringIsEmpty;
+                else
+                    return _name;
+            }
+            set
+            {
+                if (value.Equals(string.Empty))
+                    Debug.WriteLine("Exception: String length must be
+                     greater than zero.");
+            }
+        }
+    }
+}
+```
+در کلاس LooseCouplingA، فیلد _name را به عنوان private اعلام می‌کنیم و از تغییر مستقیم داده‌ها جلوگیری می‌کنیم. داده‌های _name توسط ویژگی Name به صورت غیرمستقیم قابل دسترسی می‌شوند:
+
+```C#
+
+using System.Diagnostics;
+namespace CH3.Coupling
+{
+    public class LooseCouplingB
+    {
+        public LooseCouplingB()
+        {
+            LooseCouplingA lca = new LooseCouplingA();
+            lca = null;
+            Debug.WriteLine($"Name is {lca.Name}");
+        }
+    }
+}
+```
+کلاس LooseCouplingB قادر به دسترسی مستقیم به متغیر _name کلاس LooseCouplingA نیست و بنابراین عضو داده را از طریق یک ویژگی تغییر می‌دهد.
+
+خُب، ما به جفت‌شدگی نگاه کردیم و اکنون می‌دانیم که چگونه از کد با جفت‌شدگی محکم اجتناب کرده و کد با جفت‌شدگی سست را پیاده‌سازی کنیم. بنابراین اکنون، زمان آن است که به برخی از مثال‌های همبستگی پایین (low cohesion) و همبستگی بالا (high cohesion) نگاه کنیم.
