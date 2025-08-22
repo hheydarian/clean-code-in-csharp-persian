@@ -54,12 +54,12 @@
   <li><b>00 - Preface:</b> مقدمه (ترجمه شده ✅)</li>
   <li><b>01 - #Coding Standards and Principles in C:</b> استاندارد ها و اصول کدنویسی در سی شارپ ( ترجمه شده ✅)</li>
   <li><b>02 - Code Review – Process and Importance:</b> بررسی کد - فرانید و اهمیت (ترجمه شده ✅)</li>
-  <li><b>03 - Classes, Objects, and Data Structures:</b> کلاس ها، اشیا و ساختار داده (در حال ترجمه  🟡)</li>
+  <li><b>03 - Classes, Objects, and Data Structures:</b> کلاس ها، اشیا و ساختار داده (ترجمه شده ✅)</li>
   <li><b>04 - Writing Clean Functions:</b> نوشتن توابع تمیز ( ترجمه شده ✅)</li>
-  <li><b>05 - Exception Handling:</b> رسیدگی به خطاها (ترجمه نشده ❌)</li>
-  <li><b>06 - Unit Testing:</b> تست واحد (ترجمه نشده ❌)</li>
-  <li><b>07 - End-to-End System Testing:</b> تست پایان به پایان سیستم (ترجمه نشده ❌)</li>
-  <li><b>08 - Threading and Concurrency:</b> رشته ها و همزمانی (ترجمه نشده ❌)</li>
+  <li><b>05 - Exception Handling:</b> رسیدگی به خطاها (ترجمه شده ✅)</li>
+  <li><b>06 - Unit Testing:</b> تست واحد (ترجمه شده ✅)</li>
+  <li><b>07 - End-to-End System Testing:</b> تست پایان به پایان سیستم (در حال ترجمه  🟡)</li>
+  <li><b>08 - Threading and Concurrency:</b> رشته ها و همزمانی (در حال ترجمه  🟡)</li>
   <li><b>09 - Designing and Developing APIs:</b> طراحی و توسعه API ها (ترجمه نشده ❌)</li>
   <li><b>10 - Securing APIs with API Keys and Azure Key Vault:</b> ایمن سازی API ها با API Keys و Azure Key (ترجمه نشده ❌)</li>
   <li><b>11 - Addressing Cross-Cutting Concerns:</b> آدرس دهی به نقاط حساس (ترجمه نشده ❌)</li>
@@ -77,12 +77,12 @@
 | 00    | Preface                                            | مقدمه                                         | ✅     | [Preface](Book/00/Preface.md)                                                                                   |
 | 01    | Coding Standards and Principles in C#              | استاندارد ها و اصول کدنویسی در سی شارپ        | ✅     | [Coding-Standards-and-Principles-in-C#](Book/01/Coding-Standards-and-Principles-in-C%23.md)                      |
 | 02    | Code Review – Process and Importance               | بررسی کد - فرانید و اهمیت                     | ✅     | [Code-Review-Process-and-Importance](Book/02/Code-Review-Process-and-Importance.md)                             |
-| 03    | Classes, Objects, and Data Structures              | کلاس ها، اشیا و ساختار داده                   | 🟡     | [Classes-Objects-and-Data](Book/03/Classes-Objects-and-Data.md)                                                 |
+| 03    | Classes, Objects, and Data Structures              | کلاس ها، اشیا و ساختار داده                   | ✅     | [Classes-Objects-and-Data](Book/03/Classes-Objects-and-Data.md)                                                 |
 | 04    | Writing Clean Functions                            | نوشتن توابع تمیز                              | ✅     | [Writing-Clean-Functions](Book/04/Writing-Clean-Functions.md)                                                   |
-| 05    | Exception Handling                                 | رسیدگی به خطاها                               | ❌     | [Book/05/Exception-Handling.md](Book/05/Exception-Handling.md)                                                             |
-| 06    | Unit Testing                                       | تست واحد                                      | ❌     | [Book/06/Unit-Testing.md](Book/06/Unit-Testing.md)                                                                         |
-| 07    | End-to-End System Testing                          | تست پایان به پایان سیستم                      | ❌     | [Book/07/End-to-End-System-Testing.md](Book/07/End-to-End-System-Testing.md)                                               |
-| 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | ❌     | [Book/08/Threading-and-Concurrency.md](Book/08/Threading-and-Concurrency.md)                                               |
+| 05    | Exception Handling                                 | رسیدگی به خطاها                               | ✅     | [Book/05/Exception-Handling.md](Book/05/Exception-Handling.md)                                                             |
+| 06    | Unit Testing                                       | تست واحد                                      | ✅     | [Book/06/Unit-Testing.md](Book/06/Unit-Testing.md)                                                                         |
+| 07    | End-to-End System Testing                          | تست پایان به پایان سیستم                      | 🟡     | [Book/07/End-to-End-System-Testing.md](Book/07/End-to-End-System-Testing.md)                                               |
+| 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | 🟡     | [Book/08/Threading-and-Concurrency.md](Book/08/Threading-and-Concurrency.md)                                               |
 | 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | ❌     | [Book/09/Designing-and-Developing-APIs.md](Book/09/Designing-and-Developing-APIs.md)                                       |
 | 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | ❌     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
 | 11    | Addressing Cross-Cutting Concerns                  | آدرس دهی به نقاط حساس                         | ❌     | [Book/11/Addressing-Cross-Cutting-Concerns.md](Book/11/Addressing-Cross-Cutting-Concerns.md)                               |
