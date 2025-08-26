@@ -59,8 +59,8 @@
   <li><b>05 - Exception Handling:</b> رسیدگی به خطاها (ترجمه شده ✅)</li>
   <li><b>06 - Unit Testing:</b> تست واحد (ترجمه شده ✅)</li>
   <li><b>07 - End-to-End System Testing:</b> تست پایان به پایان سیستم (ترجمه شده ✅)</li>
-  <li><b>08 - Threading and Concurrency:</b> رشته ها و همزمانی (در حال ترجمه  🟡)</li>
-  <li><b>09 - Designing and Developing APIs:</b> طراحی و توسعه API ها (ترجمه نشده ❌)</li>
+  <li><b>08 - Threading and Concurrency:</b> رشته ها و همزمانی (ترجمه شده ✅)</li>
+  <li><b>09 - Designing and Developing APIs:</b> طراحی و توسعه API ها (در حال ترجمه  🟡)</li>
   <li><b>10 - Securing APIs with API Keys and Azure Key Vault:</b> ایمن سازی API ها با API Keys و Azure Key (ترجمه نشده ❌)</li>
   <li><b>11 - Addressing Cross-Cutting Concerns:</b> آدرس دهی به نقاط حساس (ترجمه نشده ❌)</li>
   <li><b>12 - Using Tools to Improve Code Quality:</b> استفاده از ابزارها برای بهبود کیفیت کد (ترجمه نشده ❌)</li>
@@ -82,9 +82,9 @@
 | 05    | Exception Handling                                 | رسیدگی به خطاها                               | ✅     | [Book/05/Exception-Handling.md](Book/05/Exception-Handling.md)                                                             |
 | 06    | Unit Testing                                       | تست واحد                                      | ✅     | [Book/06/Unit-Testing.md](Book/06/Unit-Testing.md)                                                                         |
 | 07    | End-to-End System Testing                          | تست پایان به پایان سیستم                      | ✅     | [Book/07/End-to-End-System-Testing.md](Book/07/End-to-End-System-Testing.md)                                               |
-| 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | 🟡     | [Book/08/Threading-and-Concurrency.md](Book/08/Threading-and-Concurrency.md)                                               |
-| 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | ❌     | [Book/09/Designing-and-Developing-APIs.md](Book/09/Designing-and-Developing-APIs.md)                                       |
-| 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | ❌     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
+| 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | ✅     | [Book/08/Threading-and-Concurrency.md](Book/08/Threading-and-Concurrency.md)                                               |
+| 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | 🟡     | [Book/09/Designing-and-Developing-APIs.md](Book/09/Designing-and-Developing-APIs.md)                                       |
+| 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | 🟡     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
 | 11    | Addressing Cross-Cutting Concerns                  | آدرس دهی به نقاط حساس                         | ❌     | [Book/11/Addressing-Cross-Cutting-Concerns.md](Book/11/Addressing-Cross-Cutting-Concerns.md)                               |
 | 12    | Using Tools to Improve Code Quality                | استفاده از ابزارها برای بهبود کیفیت کد        | ❌     | [Book/12/Using-Tools-to-Improve-Code-Quality.md](Book/12/Using-Tools-to-Improve-Code-Quality.md)                           |
 | 13    | Refactoring C# Code – Identifying Code Smells      | ریفکتور در سی شارپ - شناسایی کدها             | ❌     | [Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md](Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md)           |
