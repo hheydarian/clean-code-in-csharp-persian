@@ -10,14 +10,16 @@
   <b>راهنمایی برای نوشتن کدهای تمیز، حرفه‌ای و قابل نگهداری  در زبان C#</b>
 </p>
 
+
 <p align="center">
   <img src="https://img.shields.io/github/stars/hheydarian/clean-code-in-csharp-persian?style=social" alt="GitHub stars">
   <img src="https://img.shields.io/github/forks/hheydarian/clean-code-in-csharp-persian?color=blueviolet" alt="GitHub forks">
-  <img src="https://img.shields.io/github/issues/hheydarian/clean-code-in-csharp-persian?color=ff69b4" alt="GitHub issues">
-  <img src="https://img.shields.io/github/issues-pr/hheydarian/clean-code-in-csharp-persian?color=orange" alt="GitHub pull requests">
   <img src="https://img.shields.io/github/last-commit/hheydarian/clean-code-in-csharp-persian?color=9cf" alt="Last Commit">
-</p>
+<img src="https://img.shields.io/github/license/hheydarian/clean-code-in-csharp-persian" alt="License">
+  <img src="https://img.shields.io/badge/Translation-100%25-success" alt="Translation Status">
+<img src="https://visitor-badge.laobi.icu/badge?page_id=hheydarian.clean-code-in-csharp-persian" alt="Visitors">
 
+</p>
 
 
 
@@ -41,33 +43,10 @@
 
 ما به حضور شما تو این پروژه افتخار می‌کنیم! مشارکت‌تون می‌تونه از راه‌های زیر باشه:
 
-- ✍️ **ترجمه فصل‌های باقی‌مانده**
 - 🔎 **بازبینی و اصلاح ترجمه‌های فعلی**
 - 💡 **پیشنهادات فنی یا ادبی برای بهبود متن**
 - 🎨 **مرتب‌سازی و فرمت‌دهی کدها برای خوانایی بیشتر**
 -  🗨️ **اگر قصد داشتید از هوش مصنوعی استفاده کنید در ترجمه، می تونید این متن [پرامپت](assets/prompt.md ) رو بهش بدید.**
-
-## 📚 وضعیت ترجمه
-
-
-<ul dir="rtl">
-  <li><b>00 - Preface:</b> مقدمه (ترجمه شده ✅)</li>
-  <li><b>01 - #Coding Standards and Principles in C:</b> استاندارد ها و اصول کدنویسی در سی شارپ ( ترجمه شده ✅)</li>
-  <li><b>02 - Code Review – Process and Importance:</b> بررسی کد - فرانید و اهمیت (ترجمه شده ✅)</li>
-  <li><b>03 - Classes, Objects, and Data Structures:</b> کلاس ها، اشیا و ساختار داده (ترجمه شده ✅)</li>
-  <li><b>04 - Writing Clean Functions:</b> نوشتن توابع تمیز ( ترجمه شده ✅)</li>
-  <li><b>05 - Exception Handling:</b> رسیدگی به خطاها (ترجمه شده ✅)</li>
-  <li><b>06 - Unit Testing:</b> تست واحد (ترجمه شده ✅)</li>
-  <li><b>07 - End-to-End System Testing:</b> تست پایان به پایان سیستم (ترجمه شده ✅)</li>
-  <li><b>08 - Threading and Concurrency:</b> رشته ها و همزمانی (ترجمه شده ✅)</li>
-  <li><b>09 - Designing and Developing APIs:</b> طراحی و توسعه API ها (ترجمه شده ✅)</li>
-  <li><b>10 - Securing APIs with API Keys and Azure Key Vault:</b> ایمن سازی API ها با API Keys و Azure Key (ترجمه نشده ❌)</li>
-  <li><b>11 - Addressing Cross-Cutting Concerns:</b> آدرس دهی به نقاط حساس (در حال ترجمه  🟡)</li>
-  <li><b>12 - Using Tools to Improve Code Quality:</b> استفاده از ابزارها برای بهبود کیفیت کد (در حال ترجمه  🟡)</li>
-  <li><b>13 - Refactoring C# Code – Identifying Code Smells:</b> ریفکتور در سی شارپ - شناسایی کدها (در حال ترجمه  🟡)</li>
-  <li><b>14 - Refactoring C# Code – Implementing Design Patterns:</b> ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی (در حال ترجمه  🟡)</li>
-</ul>
-<br>
 
 ---
 ## 🔗 فصل‌های کتاب (با لینک)
@@ -79,16 +58,17 @@
 | 02    | Code Review – Process and Importance               | بررسی کد - فرانید و اهمیت                     | ✅     | [Code-Review-Process-and-Importance](Book/02/Code-Review-Process-and-Importance.md)                             |
 | 03    | Classes, Objects, and Data Structures              | کلاس ها، اشیا و ساختار داده                   | ✅     | [Classes-Objects-and-Data](Book/03/Classes-Objects-and-Data.md)                                                 |
 | 04    | Writing Clean Functions                            | نوشتن توابع تمیز                              | ✅     | [Writing-Clean-Functions](Book/04/Writing-Clean-Functions.md)                                                   |
-| 05    | Exception Handling                                 | رسیدگی به خطاها                               | ✅     | [Book/05/Exception-Handling.md](Book/05/Exception-Handling.md)                                                             |
-| 06    | Unit Testing                                       | تست واحد                                      | ✅     | [Book/06/Unit-Testing.md](Book/06/Unit-Testing.md)                                                                         |
-| 07    | End-to-End System Testing                          | تست پایان به پایان سیستم                      | ✅     | [Book/07/End-to-End-System-Testing.md](Book/07/End-to-End-System-Testing.md)                                               |
-| 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | ✅     | [Book/08/Threading-and-Concurrency.md](Book/08/Threading-and-Concurrency.md)                                               |
-| 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | ✅     | [Book/09/Designing-and-Developing-APIs.md](Book/09/Designing-and-Developing-APIs.md)                                       |
-| 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | ✅     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
-| 11    | Addressing Cross-Cutting Concerns                  | آدرس دهی به نقاط حساس                         | 🟡     | [Book/11/Addressing-Cross-Cutting-Concerns.md](Book/11/Addressing-Cross-Cutting-Concerns.md)                               |
-| 12    | Using Tools to Improve Code Quality                | استفاده از ابزارها برای بهبود کیفیت کد        | 🟡     | [Book/12/Using-Tools-to-Improve-Code-Quality.md](Book/12/Using-Tools-to-Improve-Code-Quality.md)                           |
-| 13    | Refactoring C# Code – Identifying Code Smells      | ریفکتور در سی شارپ - شناسایی کدها             | 🟡     | [Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md](Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md)           |
-| 14    | Refactoring C# Code – Implementing Design Patterns | ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی | 🟡     | [Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md](Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md) |
+| 05    | Exception Handling                                 | رسیدگی به خطاها                               | ✅     | [Book/05/Exception-Handling](Book/05/Exception-Handling.md)                                                             |
+| 06    | Unit Testing                                       | تست واحد                                      | ✅     | [Book/06/Unit-Testing](Book/06/Unit-Testing.md)                                                                         |
+| 07    | End-to-End System Testing                          | تست پایان به پایان سیستم                      | ✅     | [Book/07/End-to-End-System-Testing](Book/07/End-to-End-System-Testing.md)                                               |
+| 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | ✅     | [Book/08/Threading-and-Concurrency](Book/08/Threading-and-Concurrency.md)                                               |
+| 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | ✅     | [Book/09/Designing-and-Developing-APIs](Book/09/Designing-and-Developing-APIs.md)                                       |
+| 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | ✅     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
+| 11    | Addressing Cross-Cutting Concerns                  | آدرس دهی به نقاط حساس                         | ✅     | [Book/11/Addressing-Cross-Cutting-Concerns](Book/11/Addressing-Cross-Cutting-Concerns.md)                               |
+| 12    | Using Tools to Improve Code Quality                | استفاده از ابزارها برای بهبود کیفیت کد        | ✅     | [Book/12/Using-Tools-to-Improve-Code-Quality](Book/12/Using-Tools-to-Improve-Code-Quality.md)                           |
+| 13    | Refactoring C# Code – Identifying Code Smells      | ریفکتور در سی شارپ - شناسایی کدها             | ✅     | [Book/13/Refactoring-C#-Code-Identifying-Code-Smells](Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md)           |
+| 14    | Refactoring C# Code – Implementing Design Patterns | ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی | ✅     | [Book/14/Refactoring-C#-Code-Implementing-Design-Patterns](Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md) |
+| 15    | Assessments | ارزیابی ها | ✅     | [Book/15/Assessments](Book/Assessments/Assessments.md) |
 
 🛑 قبل از شروع ترجمه یا تغییرات بزرگ، لطفاً یه [Issue](https://github.com/hheydarian/clean-code-in-csharp-persian/issues) باز کن یا با [hamdhydryan12@gmail.com](mailto:hamdhydryan12@gmail.com) در ارتباط باش.
 
@@ -96,10 +76,10 @@
 
 ## 🧩 اصول ساختاری پروژه
 
-- فایل‌ها باید با فرمت `.md` نوشته بشن
-- پوشه فصل‌ها با اعداد دو رقمی مثل `01`, `02` نام‌گذاری بشن
-- کدها داخل بلوک ```csharp نوشته بشن
-- عکس‌ها داخل پوشه `assets/image/` ذخیره بشن
+- فایل‌ها با فرمت `.md` نوشته شدن
+- کدها داخل بلوک ```csharp نوشته شدن
+- عکس‌ها داخل پوشه `assets/image/` ذخیره شدن
+-  یادگیری [Markdown](https://markdown-fa-book.vercel.app/)
 
 
 ---
@@ -118,7 +98,8 @@
 
 ## 🌟 قدردانی
 
-سپاس ویژه از همه عزیزانی که وقت گذاشتن و مشارکت کردن. شما هستید که این پروژه رو زنده نگه می‌دارید. 🌱
+از همراهی و حمایت شما سپاسگزاریم؛ **شما هستید که این پروژه را زنده و پویا نگه می‌دارید.** 🌱  
+
 
 ---
 
