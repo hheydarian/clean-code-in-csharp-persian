@@ -60,12 +60,12 @@
   <li><b>06 - Unit Testing:</b> تست واحد (ترجمه شده ✅)</li>
   <li><b>07 - End-to-End System Testing:</b> تست پایان به پایان سیستم (ترجمه شده ✅)</li>
   <li><b>08 - Threading and Concurrency:</b> رشته ها و همزمانی (ترجمه شده ✅)</li>
-  <li><b>09 - Designing and Developing APIs:</b> طراحی و توسعه API ها (در حال ترجمه  🟡)</li>
+  <li><b>09 - Designing and Developing APIs:</b> طراحی و توسعه API ها (ترجمه شده ✅)</li>
   <li><b>10 - Securing APIs with API Keys and Azure Key Vault:</b> ایمن سازی API ها با API Keys و Azure Key (ترجمه نشده ❌)</li>
-  <li><b>11 - Addressing Cross-Cutting Concerns:</b> آدرس دهی به نقاط حساس (ترجمه نشده ❌)</li>
-  <li><b>12 - Using Tools to Improve Code Quality:</b> استفاده از ابزارها برای بهبود کیفیت کد (ترجمه نشده ❌)</li>
-  <li><b>13 - Refactoring C# Code – Identifying Code Smells:</b> ریفکتور در سی شارپ - شناسایی کدها (ترجمه نشده ❌)</li>
-  <li><b>14 - Refactoring C# Code – Implementing Design Patterns:</b> ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی (ترجمه نشده ❌)</li>
+  <li><b>11 - Addressing Cross-Cutting Concerns:</b> آدرس دهی به نقاط حساس (در حال ترجمه  🟡)</li>
+  <li><b>12 - Using Tools to Improve Code Quality:</b> استفاده از ابزارها برای بهبود کیفیت کد (در حال ترجمه  🟡)</li>
+  <li><b>13 - Refactoring C# Code – Identifying Code Smells:</b> ریفکتور در سی شارپ - شناسایی کدها (در حال ترجمه  🟡)</li>
+  <li><b>14 - Refactoring C# Code – Implementing Design Patterns:</b> ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی (در حال ترجمه  🟡)</li>
 </ul>
 <br>
 
@@ -83,12 +83,12 @@
 | 06    | Unit Testing                                       | تست واحد                                      | ✅     | [Book/06/Unit-Testing.md](Book/06/Unit-Testing.md)                                                                         |
 | 07    | End-to-End System Testing                          | تست پایان به پایان سیستم                      | ✅     | [Book/07/End-to-End-System-Testing.md](Book/07/End-to-End-System-Testing.md)                                               |
 | 08    | Threading and Concurrency                          | رشته ها و همزمانی                             | ✅     | [Book/08/Threading-and-Concurrency.md](Book/08/Threading-and-Concurrency.md)                                               |
-| 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | 🟡     | [Book/09/Designing-and-Developing-APIs.md](Book/09/Designing-and-Developing-APIs.md)                                       |
-| 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | 🟡     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
-| 11    | Addressing Cross-Cutting Concerns                  | آدرس دهی به نقاط حساس                         | ❌     | [Book/11/Addressing-Cross-Cutting-Concerns.md](Book/11/Addressing-Cross-Cutting-Concerns.md)                               |
-| 12    | Using Tools to Improve Code Quality                | استفاده از ابزارها برای بهبود کیفیت کد        | ❌     | [Book/12/Using-Tools-to-Improve-Code-Quality.md](Book/12/Using-Tools-to-Improve-Code-Quality.md)                           |
-| 13    | Refactoring C# Code – Identifying Code Smells      | ریفکتور در سی شارپ - شناسایی کدها             | ❌     | [Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md](Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md)           |
-| 14    | Refactoring C# Code – Implementing Design Patterns | ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی | ❌     | [Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md](Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md) |
+| 09    | Designing and Developing APIs                      | طراحی و توسعه API ها                          | ✅     | [Book/09/Designing-and-Developing-APIs.md](Book/09/Designing-and-Developing-APIs.md)                                       |
+| 10    | Securing APIs with API Keys and Azure Key Vault    | ایمن سازی API ها با API Keys و Azure Key      | ✅     | [Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md](Book/10/Securing-APIs-with-API-Keys-and-Azure-Key-Vault.md)   |
+| 11    | Addressing Cross-Cutting Concerns                  | آدرس دهی به نقاط حساس                         | 🟡     | [Book/11/Addressing-Cross-Cutting-Concerns.md](Book/11/Addressing-Cross-Cutting-Concerns.md)                               |
+| 12    | Using Tools to Improve Code Quality                | استفاده از ابزارها برای بهبود کیفیت کد        | 🟡     | [Book/12/Using-Tools-to-Improve-Code-Quality.md](Book/12/Using-Tools-to-Improve-Code-Quality.md)                           |
+| 13    | Refactoring C# Code – Identifying Code Smells      | ریفکتور در سی شارپ - شناسایی کدها             | 🟡     | [Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md](Book/13/Refactoring-C#-Code-Identifying-Code-Smells.md)           |
+| 14    | Refactoring C# Code – Implementing Design Patterns | ریفکتور در سی شارپ - پیاده سازی الگوهای طراحی | 🟡     | [Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md](Book/14/Refactoring-C#-Code-Implementing-Design-Patterns.md) |
 
 🛑 قبل از شروع ترجمه یا تغییرات بزرگ، لطفاً یه [Issue](https://github.com/hheydarian/clean-code-in-csharp-persian/issues) باز کن یا با [hamdhydryan12@gmail.com](mailto:hamdhydryan12@gmail.com) در ارتباط باش.
 
